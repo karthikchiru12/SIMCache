@@ -12,8 +12,8 @@ public class EventLoop {
     private final Selector selector;
     private final ServerSocketChannel serverSocketChannel;
     private final EventHandler eventHandler;
-    private volatile boolean isRunning;
     private final long maxTimeoutMillis;
+    private volatile boolean isRunning;
 
     public EventLoop(int port, EventHandler eventHandler, long maxTimeoutMillis) throws IOException {
         this.selector = Selector.open();
